@@ -4,6 +4,6 @@ export interface TransactionType {
   title: string;
   amount: number;
   category: string;
-  created_at?: Date; // Thêm nếu có trường timestamp trong db
+  created_at: Date | string | number; // Thêm nếu có trường timestamp trong db
   updated_at?: string; // Thêm nếu có trường timestamp trong db
 }

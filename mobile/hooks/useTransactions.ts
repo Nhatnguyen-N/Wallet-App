@@ -1,10 +1,11 @@
 // react custom hook file
 
+import { API_URL } from "@/constants/api";
 import { TransactionType } from "@/types/transactions.types"
 import { useCallback, useState } from "react"
 import { Alert } from "react-native";
 
-const API_URL = "https://wallet-app-a27b.onrender.com/api"
+
 export const useTransactions = (userId: string) => {
   const [transactions, setTransactions] = useState<TransactionType[]>([]);
   const [summary, setSummary] = useState({
